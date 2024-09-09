@@ -1,0 +1,21 @@
+/* Footer styles */
+.footer {
+    background-color: #343a40; /* Dark background color */
+  }
+  
+  .footer h5 {
+    margin-bottom: 1rem;
+  }
+  
+  .footer p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer .nav-link {
+    padding: 0;
+  }
+  
+  .footer .text-light {
+    color: #f8f9fa !important; /* Light text color */
+  }
+  
