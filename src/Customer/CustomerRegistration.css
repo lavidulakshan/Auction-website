@@ -1,4 +1,4 @@
-/* Center the form on the page */
+Center the form on the page
 .form-container {
     display: flex;
     justify-content: center;
@@ -46,4 +46,8 @@
       box-shadow: none; /* Remove shadow on small screens */
     }
   }
+.register::first-letter{
+  font-size: 50px;
+
+}
   

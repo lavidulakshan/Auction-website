@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Container, Row, Col, Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
 
 const countries = [
   'United States',
@@ -77,7 +78,7 @@ const CustomerRegistration: React.FC = () => {
     <Container fluid="md" className="my-5">
       <Row className="justify-content-center">
         <Col md={8} lg={6} xl={4}>
-          <h2 className="text-center mb-4">Customer Registration</h2>
+          <h2 className="text-center mb-4 register"> Registration</h2>
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="formFirstName">
               <Form.Label>First Name</Form.Label>
@@ -140,9 +141,14 @@ const CustomerRegistration: React.FC = () => {
                 ))}
               </Form.Control>
             </Form.Group>
-            <Button variant="primary" type="submit" className="w-100 mt-4">
+            {/* <Button variant="primary" type="submit" className="w-100 mt-4">
               Register
-            </Button>
+            </Button> */}
+
+            <Link to="/dashboard" className="btn w-100 mt-4 btn-primary">
+              Register
+            </Link>
+
           </Form>
         </Col>
       </Row>

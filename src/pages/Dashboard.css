@@ -1,0 +1,37 @@
+/* Dashboard.css */
+
+.card-header {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    margin-bottom: 15px;
+  }
+  
+  .btn {
+    margin-bottom: 10px;
+  }
+  .dashboard-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dashboard-card .card-body {
+    flex: 1;
+  }
+  
+  .dashboard-card .card-footer {
+    text-align: center;
+  }
+  

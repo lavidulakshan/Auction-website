@@ -1,0 +1,64 @@
+/* General styles for responsiveness */
+.container-fluid {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (max-width: 767.98px) {
+  /* Styles for extra-small devices (phones) */
+  .row {
+    flex-direction: column;
+  }
+
+  .form-container, .card {
+    width: 100%;
+    margin-bottom: 20px; /* Add spacing between stacked sections */
+  }
+
+  .form-container {
+    padding: 15px;
+  }
+
+  .btn-primary, .btn-light {
+    width: 100%; /* Full-width buttons */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Styles for medium to large tablets (like iPad Mini) */
+  .row {
+    flex-wrap: wrap;
+  }
+
+  .form-container, .card {
+    width: 100%; /* Ensure full width */
+    margin-bottom: 20px; /* Add spacing between stacked sections */
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+
+  .btn-primary, .btn-light {
+    width: auto; /* Adjust button width as needed */
+  }
+}
+
+@media (min-width: 1025px) {
+  /* Styles for larger screens (desktops) */
+  .row {
+    flex-wrap: nowrap;
+  }
+
+  .form-container {
+    margin-bottom: 0; /* Remove bottom margin */
+  }
+
+  .form-container, .card {
+    width: auto; /* Reset width to auto */
+  }
+
+  .btn-primary, .btn-light {
+    width: auto; /* Reset button width */
+  }
+}

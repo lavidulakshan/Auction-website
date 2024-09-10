@@ -1,62 +1,89 @@
-
 .navbar-brand {
-    margin-right: auto; 
-  }
-  
-  .navbar-nav {
-    margin-left: auto; 
-  }
-  
-  
-  .custom-navbar {
-    background-color: #007bff; 
-  }
-  
-  
+  margin-right: auto;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.custom-navbar {
+  background-color: #007bff;
+}
+
+/* Adjust logo size on smaller screens */
+.logo {
+  height: 50px;
+}
+
+@media (max-width: 768px) {
   .logo {
-    height: 50px; 
-    
+    height: 40px; /* Adjust logo size for smaller screens */
   }
-  
+}
 
-  .nav-link {
-    color: #f8f9fa; 
-    transition: color 0.3s, background-color 0.3s; 
-  }
-  
-  .nav-link:hover {
-    color: #ffc107;
-    background-color: rgba(0, 0, 0, 0.1); 
-    border-radius: 4px; 
-  }
-  
+.nav-link {
+  color: #f8f9fa; /* Text color */
+  text-decoration: none; /* Remove underline by default */
+  transition: color 0.3s, background-color 0.3s, text-decoration-color 0.3s; /* Smooth transition */
+}
 
-  .btn-outline-light {
-    border-color: #f8f9fa; 
-    color: #f8f9fa; 
-  }
-  
-  .btn-outline-light:hover {
-    background-color: #f8f9fa; 
-    color: #007bff; 
-  }
-  
-  .btn-light {
-    background-color: #f8f9fa; 
-    color: #007bff; 
-  }
-  
-  .btn-light:hover {
-    background-color: #e2e6ea; 
-    color: #0056b3; 
-  }
-  
+.nav-link:hover {
+  color: #ffc107; /* Change text color on hover */
+  background-color: rgba(0, 0, 0, 0.1); /* Change background color on hover */
+  text-decoration: underline; /* Add underline */
+  text-decoration-color: red;
+}
 
-  @media (max-width: 576px) {
-    .navbar-collapse .btn {
-      display: block; 
-      width: 100%; 
-      margin-bottom: 10px; 
-    }
+/* Responsive button alignment */
+.btn-outline-light {
+  border-color: #f8f9fa;
+  color: #f8f9fa;
+}
+
+.btn-outline-light:hover {
+  background-color: #f8f9fa;
+  color: #007bff;
+}
+
+.btn-light {
+  background-color: #f8f9fa;
+  color: #007bff;
+}
+
+.btn-light:hover {
+  background-color: #e2e6ea;
+  color: #0056b3;
+}
+
+/* Add media query for buttons on small screens */
+@media (max-width: 576px) {
+  .navbar-collapse .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
   }
-  
+}
+
+.sriPay {
+  padding-left: 10px;
+  font-size: 30px;
+  font-family: "SUSE", sans-serif;
+}
+
+.sriPay::first-letter {
+  font-size: 50px;
+  font-style: italic;
+  color: #d0d5da;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .sriPay {
+    font-size: 25px;
+  }
+
+  .sriPay::first-letter {
+    font-size: 40px;
+  }
+}
+

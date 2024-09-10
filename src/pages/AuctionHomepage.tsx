@@ -7,7 +7,6 @@ import './HomePage.css'; // Import the custom CSS file
 import alipay from '../images/alipay.jpeg';
 import visa from '../images/visa.jpeg';
 
-
 const featuredItems = [
   {
     title: 'Vintage Car',

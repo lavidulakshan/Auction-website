@@ -1,0 +1,23 @@
+.about-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .about-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .about-card .card-header {
+    background-color: #f8f9fa;
+    font-weight: bold;
+  }
+  
+  .about-card .card-body {
+    text-align: center;
+  }
+  
+  .about-card .btn {
+    margin-top: 1rem;
+  }
+  

@@ -1,8 +1,7 @@
 import React from 'react';
-import { Navbar, Nav, Button, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Header.css'; // Import the CSS file for custom styles
-import logo from '../images/logo.jpeg'; // Adjust path if necessary
 import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
@@ -10,24 +9,22 @@ const Header: React.FC = () => {
     <Navbar className="custom-navbar" variant="dark" expand="lg">
       <Container>
         <Navbar.Brand href="#home" className="d-flex align-items-center">
-          <img
-            src={logo}
-            alt="Logo"
-            className="logo"
-          />
+          <p className='sriPay'> Sri pay</p>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto d-flex align-items-center">
-          <Link to="/" className="nav-link">
-                Home
+          <Nav className="nav-items d-flex flex-column flex-lg-row align-items-center justify-content-center">
+            <Link to="/" className="nav-link">
+              Home
+            </Link>
+            <Link to="/aboutus" className="nav-link">AboutUS</Link>
+            <Link to="/services" className="nav-link">Services</Link>
+            <Link to="/selling" className="nav-link">Selling</Link>
+            <div className="d-flex flex-wrap justify-content-center">
+              <Link to="/sigin" className="btn btn mb-2 mx-2">
+                SignIn
               </Link>
-            <Nav.Link href="#aboutus" className="nav-link">About Us</Nav.Link>
-            <Nav.Link href="#services" className="nav-link">Services</Nav.Link>
-            <Nav.Link href="#auction" className="nav-link">Auction</Nav.Link>
-            <div className="ml-auto d-flex flex-wrap">
-              <Button variant="outline-light" className="mx-2 mb-2" href="#signin">Sign In</Button>
-              <Link to="/customerregistration" className="btn btn-light mb-2">
+              <Link to="/CustomerRegistration" className="btn btn-light mb-2">
                 Register
               </Link>
             </div>
