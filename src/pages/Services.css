@@ -1,80 +1,142 @@
-/* Services.css */
-
-.service-icon {
-    font-size: 3rem;
-    color: #007bff; /* Adjust to your theme color */
-  }
-  
-  .service-icon i {
-    transition: color 0.3s ease;
-  }
-  
-  .service-icon i:hover {
-    color: #0056b3; /* Darker shade for hover effect */
-  }
-  
-  .card-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .card-text {
-    font-size: 1rem;
-    color: #6c757d; /* Adjust based on your theme */
-  }
-  
-  .btn-primary {
-    background-color: #007bff; /* Adjust to your theme color */
-    border: none;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3; /* Darker shade for hover effect */
-  }
 
 
-  /* General styles for responsiveness */
-.container-fluid {
-  padding-left: 15px;
-  padding-right: 15px;
+.service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border-radius: 0.5rem;
+  transition: box-shadow 0.3s ease;
 }
 
+
+.service-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.service-icon {
+  font-size: 2.5rem;
+  color: #007bff; 
+}
+
+.card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+  transform: translateY(-5px); 
+}
+
+.service-icon i {
+  transition: color 0.3s ease;
+}
+
+.service-icon i:hover {
+  color: #0056b3; 
+}
+
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #6c757d; 
+}
+
+.btn-primary {
+  background-color: #007bff; 
+  color: #050404; 
+  border: none; 
+  box-shadow: none; 
+  transition: none; 
+
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: #007bff; 
+  color: #121111; 
+}
+
+
 @media (max-width: 767.98px) {
-  /* Stack columns vertically on small screens */
   .row {
     flex-direction: column;
   }
-
-  .form-container {
-    margin-bottom: 20px; /* Add spacing between stacked sections */
-  }
-
-  .form-container, .card {
-    width: 100%; /* Ensure full width on small screens */
-  }
-
-  .form-container {
-    padding: 15px;
-  }
-
-  .btn-primary {
-    width: 100%; /* Full-width buttons on small screens */
-  }
-
-  .btn-light {
-    width: 100%; /* Full-width buttons on small screens */
-  }
 }
 
-@media (min-width: 768px) {
-  /* Styles for medium and larger screens */
-  .form-container {
-    margin-bottom: 0; /* Remove bottom margin for larger screens */
-  }
 
-  .card {
-    width: 100%; /* Ensure full width on medium and larger screens */
-  }
+
+.btn-primary {
+  background-color: #007bff; 
+  color: #fff; 
+  border: none; 
+  border-radius: 5rem; 
+  padding: 0.75rem 1.5rem; 
+  font-size: 1rem; 
+  font-weight: bold; 
+  text-transform: uppercase; 
+  cursor: pointer; 
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
-  
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #0056b3; 
+  color: #fff; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+  transform: translateY(-2px); 
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none; 
+  border-radius: 0.5rem; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: all 0.3s ease; 
+}
+
+
+.card-body {
+  padding: 1.5rem; 
+  text-align: center; 
+}
+
+/* Card title styling */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+
+.card-text {
+  font-size: 1rem;
+  color: #6c757d; 
+  margin-bottom: 1.5rem; 
+}
+
+
+.card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+  transform: translateY(-5px); 
+}
+
+
+.service-icon i {
+  font-size: 3rem;
+  color: #007bff; 
+  margin-bottom: 1rem; 
+}
+
+
+.service-icon i:hover {
+  color: #0056b3; 
+}
+
+

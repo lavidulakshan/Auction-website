@@ -10,6 +10,8 @@ import Dashboard from './pages/Dashboard';
 import AboutUs from './pages/AboutUs';
 import Selling from './pages/Selling';
 import Services from './pages/Services';
+import MerchantRegistration from './Merchant/MerchantRegistration';
+import MerchantSignin from './Merchant/MerchantSignin';
 
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/selling" element={<Selling />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/merchantregistration" element={<MerchantRegistration />} />
+        <Route path="/merchansignin" element={<MerchantSignin />} />
      
       </Routes>
       <Footer />

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Services.css'; // Import custom CSS file for additional styling
+import './Services.css'; 
 
 const Services: React.FC = () => {
   const services = [
@@ -29,23 +29,24 @@ const Services: React.FC = () => {
 
   return (
     <Container fluid="md" className="my-5">
-      <Row className="text-center mb-4">
+      <Row className="text-center mb-5">
         <Col md={12}>
           <h1>Our Services</h1>
-          <p className="lead">Discover the range of services we offer to enhance your auction experience.</p>
+          <p className="lead">Explore our diverse range of services designed to enhance your auction experience.</p>
         </Col>
       </Row>
       <Row>
         {services.map((service, index) => (
           <Col md={6} lg={3} className="mb-4" key={index}>
-            <Card className="shadow-lg border-0 rounded">
-              <Card.Body className="text-center">
+            <Card className="service-card border-0 rounded">
+              <Card.Body className="text-center d-flex flex-column justify-content-between">
                 <div className="service-icon mb-3">
                   <i className={service.icon}></i>
                 </div>
-                <Card.Title>{service.title}</Card.Title>
-                <Card.Text>{service.description}</Card.Text>
-                <Button variant="primary" href="/learn-more">Learn More</Button>
+                <Card.Title className="mb-3">{service.title}</Card.Title>
+                <Card.Text className="mb-4">{service.description}</Card.Text>
+                <button className="btn-primary">Learn More</button>
+
               </Card.Body>
             </Card>
           </Col>

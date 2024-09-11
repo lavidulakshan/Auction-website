@@ -19,7 +19,7 @@ const Header: React.FC = () => {
             </Link>
             <Link to="/aboutus" className="nav-link">AboutUS</Link>
             <Link to="/services" className="nav-link">Services</Link>
-            <Link to="/selling" className="nav-link">Selling</Link>
+            <Link to="/merchantregistration" className="nav-link">Selling</Link>
             <div className="d-flex flex-wrap justify-content-center">
               <Link to="/sigin" className="btn btn mb-2 mx-2">
                 SignIn

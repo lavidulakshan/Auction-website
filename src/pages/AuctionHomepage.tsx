@@ -96,27 +96,31 @@ const AuctionHomepage: React.FC = () => {
 
       {/* Upcoming Auctions Section */}
       <Container className="my-5 text-center">
-        <h1 className="mb-4">Upcoming Auctions</h1>
-        <Row>
-          {featuredItems.map((item, index) => (
-            <Col md={4} key={index} className="mb-4">
-              <Card>
-                <Card.Img variant="top" src={item.imgSrc} className="card-img" />
-                <Card.Body>
-                  <Card.Title>{item.title}</Card.Title>
-                  <Card.Text>
-                    {item.description}
-                  </Card.Text>
-                  <Button variant="primary" href={`/auction/${index}`}>Bid Now</Button>
-                </Card.Body>
-                <Card.Footer>
-                  <small className="text-muted">Auction Date: {item.auctionDate}</small>
-                </Card.Footer>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </Container>
+  <h1 className="mb-4">Upcoming Auctions</h1>
+  {Array.from({ length: Math.ceil(featuredItems.length / 3) }).map((_, rowIndex) => (
+    <Row key={rowIndex} className="mb-4">
+      {featuredItems.slice(rowIndex * 3, rowIndex * 3 + 3).map((item, index) => (
+        <Col md={4} key={index}>
+          <Card>
+            <Card.Img variant="top" src={item.imgSrc} className="card-img" />
+            <Card.Body>
+              <Card.Title>{item.title}</Card.Title>
+              <Card.Text>{item.description}</Card.Text>
+              <button className="bid-now-button">Bid Now</button>
+
+
+            </Card.Body>
+            <Card.Footer>
+              <small className="text-muted">Auction Date: {item.auctionDate}</small>
+            </Card.Footer>
+          </Card>
+        </Col>
+      ))}
+    </Row>
+  ))}
+</Container>
+
+
 
       {/* About Section */}
       {/* <Container className="my-5 text-center">
@@ -158,7 +162,7 @@ const AuctionHomepage: React.FC = () => {
       {/* Partners Section */}
       <section className="partners-section py-5 bg-light">
         <div className="container">
-        <h3 className="text-center mb-4 text-primary fw-bold border-bottom border-dark pb-2">Our Partners</h3>
+          <h3 className="text-center mb-4 text-primary fw-bold border-bottom border-dark pb-2">Our Partners</h3>
           <div className="partners-row d-flex overflow-auto" ref={partnersRowRef}>
             <div className="partner card mx-3">
               <img src={visa} alt="Partner 1" className="card-img-top" />
